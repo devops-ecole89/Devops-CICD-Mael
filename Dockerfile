@@ -24,10 +24,8 @@ WORKDIR /home/ubuntu/Devops-Mael
 # Ensure the branch exists before checking out
 RUN git fetch origin dev && git checkout dev
 
+ENV PYTHONPATH="/home/ubuntu/Devops-Mael"
 
-#Run sh script test and run
-CMD ["sh", "myproject.py"]
-
-
-#CMD ["python3", "flaskApp/myproject.py"]
+# Run the application
+CMD ["python", "myproject.py"]
 
