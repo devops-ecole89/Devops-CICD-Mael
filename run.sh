@@ -8,9 +8,11 @@ REPO_BRANCH="dev"
 REPO_BRANCH_MERGE="staging"
 # récuper le dépot git
 git clone $REPO_URL
-export PYTHONPATH=$(pwd)
 cd $REPO_NAME
 git checkout $REPO_BRANCH
+
+export PYTHONPATH=$(pwd)
+
 
 python3 -m venv venv
 source venv/bin/activate
